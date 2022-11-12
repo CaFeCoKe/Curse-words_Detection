@@ -1,5 +1,7 @@
 # Curse-words_Detection
-- 알고리즘 순서도 <br>
+- 알고리즘 순서도 <br><br>
+  ![Curse_detection_algorithm](https://user-images.githubusercontent.com/86700191/201473592-8a6cede2-4d7d-4e19-9cca-b8008a305067.png) 
+<br><br>
 - 결과 <br>
 - 주의한 점 <br>
    - 데이터셋에 구분자인 "|"가 2개인 데이터가 존재 <br>
