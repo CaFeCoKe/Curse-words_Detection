@@ -3,6 +3,13 @@
   ![Curse_detection_algorithm](https://user-images.githubusercontent.com/86700191/201473592-8a6cede2-4d7d-4e19-9cca-b8008a305067.png) 
 <br><br>
 - 결과 <br>
+  - train, validation 단계 <br>
+  ![1](https://user-images.githubusercontent.com/86700191/201509619-6b70da59-89a0-42a0-8b43-43ca9a1c0f57.PNG) <br>
+  마지막 5번째 epoch에서 validation loss의 값이 높아져 overfitting이 시작되는 구간이라 볼 수 있는 결과가 나왔다.
+  <br><br>
+  - test 단계 <br>
+  ![2](https://user-images.githubusercontent.com/86700191/201509621-2837d67d-420b-44a0-a3cd-c012badadbb0.PNG) <br>
+  test data에 대해 약 86%의 정확도를 기록하여 무난한 결과를 얻었다고 볼 수 있다. validation의 정확도보다 test의 정확도가 낮은 이유는 데이터의 양이 2배이기 때문이다.
 - 주의한 점 <br>
    - 데이터셋에 구분자인 "|"가 2개인 데이터가 존재 <br>
    ![error](https://user-images.githubusercontent.com/86700191/197709787-1df7be8c-26a1-452f-8c31-5a07217ba57c.PNG) <br><br>
