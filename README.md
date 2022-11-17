@@ -14,8 +14,8 @@
       <td align ="center">2회차</td>
     </tr>
    </table>
-  1회차에서 마지막 5번째 epoch에서 validation loss의 값이 높아지나 2회차에선 그렇지 않아 overfitting이 시작될 수 있는 구간이라 볼 수 있다.
-  <br><br>
+  1회차에서 마지막 5번째 epoch에서 validation loss의 값이 높아지나 2회차에선 그렇지 않아 overfitting이 시작될 수 있는 구간이라 볼 수 있다.<br><br>
+  
   - test 단계 <br>
   <table border ="0">
     <tr>
@@ -27,7 +27,12 @@
       <td align ="center">2회차</td>
     </tr>
    </table>
-  1회차에선 test data에 대해 약 86%의 정확도를 기록하고, 2회차에선 약 90%의 정확도를 기록하여 무난한 결과를 얻었다고 볼 수 있다. validation의 정확도보다 test의 정확도가 낮은 이유는 데이터의 양이 2배이기 때문이다.
+  1회차에선 test data에 대해 약 86%의 정확도를 기록하고, 2회차에선 약 90%의 정확도를 기록하여 무난한 결과를 얻었다고 볼 수 있다. validation의 정확도보다 test의 정확도가 낮은 이유  는 데이터의 양이 2배이기 때문이다.<br><br>
+  
+  - 실행 단계<br>
+  ![result](https://user-images.githubusercontent.com/86700191/202347357-6e83d0f2-18a1-4d4d-be9b-8a6d46da29dd.PNG)<br>
+  간단한 테스트 실행 결과이며, 수 많은 프로그램에서 비속어 필터를 피하기 위해 중간에 특수문자를 섞어 쓰는 경우도 잘 감지하는 것으로 보인다. 또한, Tokenizing을 하기 전 텍스트 전처리함수를 똑같이 적용 시켜 같은 문자가 3번이상 반복되어도 이를 줄여 모델에 입력되기 때문에 이 경우도 잘 감지하는 것으로 보여진다.<br><br>
+  
 - 주의한 점 <br>
    - 데이터셋에 구분자인 "|"가 2개인 데이터가 존재 <br>
    ![error](https://user-images.githubusercontent.com/86700191/197709787-1df7be8c-26a1-452f-8c31-5a07217ba57c.PNG) <br><br>
@@ -40,8 +45,8 @@
       <td><img src="https://user-images.githubusercontent.com/86700191/199435135-eb16f923-182f-4d6c-9757-b72af3c1ae0f.PNG" width="100%" height="100%"></td>
     </tr>
    </table>
-   max_length를 정하지 않고 쓰게 되면 왼쪽의 두 문장을 반복하여 쓴 텍스트로 인해 길이가 456으로 고정되어 오른쪽과 같이 짧은 텍스트에는 pad token이 쓸데없이 많이 생긴다. 따라서max_length의 길이를 256으로 정하여 pad_token을 줄이며, 세번째로 긴 텍스트까지는 뒷부분을 잘랴내어 사용한다.
-
+   max_length를 정하지 않고 쓰게 되면 왼쪽의 두 문장을 반복하여 쓴 텍스트로 인해 길이가 456으로 고정되어 오른쪽과 같이 짧은 텍스트에는 pad token이 쓸데없이 많이 생긴다. 따라서max_length의 길이를 256으로 정하여 pad_token을 줄이며, 세번째로 긴 텍스트까지는 뒷부분을 잘랴내어 사용한다.<br><br>
+   
 - 사용한 언어 모델, 데이터 <br>
    - Pre-trained Model : [KcELECTRA by Beomi](https://github.com/Beomi/KcELECTRA)
    - Fine-tuning Data : [욕설 감지 데이터셋 by 2runo](https://github.com/2runo/Curse-detection-data)
